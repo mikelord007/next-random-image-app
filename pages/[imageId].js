@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 export default function ImageGen({imgSrc,title}) {
 
@@ -26,7 +25,7 @@ export default function ImageGen({imgSrc,title}) {
         <meta property="twitter:description" content="You will be able to see random image on this page."/>
         <meta property="twitter:image" content={imgSrc}/>
       </Head>
-      <h2>Random Image for you:</h2>
+      <h2>{`Random Image for you of ${title}:`}</h2>
       <Image src={imgSrc} alt='random image' width={800} height={450}/>
     </>
   )
